@@ -28,7 +28,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
-var scopeRequiredByApi = app.Configuration["AzureAd:Scopes"];
+var scopeRequiredByApi = app.Configuration["AzureAd:Scopes"].Split(",");
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
